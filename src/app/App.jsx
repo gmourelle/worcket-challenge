@@ -1,31 +1,38 @@
 import React, { useState, useEffect } from "react";
 import api from "../api";
 import { Header, ItemList, ModalForm, EmptyList } from "../components";
-
+import {
+  STATUS,
+  BOOTING,
+  INIT,
+  PENDING,
+  REJECTED,
+  RESOLVED
+} from "../constants";
 import "./App.scss";
 const App = () => {
-  const [status, setStatus] = useState("booting");
+  const [status, setStatus] = useState(BOOTING);
   const [items, setItems] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     api.items.fetch().then(initialItems => {
       setItems(initialItems);
-      setStatus("init");
+      setStatus(INIT);
     });
   }, []);
   const updateList = async value => {
     try {
-      setStatus("pending");
+      setStatus(PENDING);
 
       await api.items.update(value);
 
       setItems(value);
-      setStatus("resolved");
+      setStatus(RESOLVED);
       setIsOpen(false);
     } catch (e) {
       console.log("e.message:", e.message);
-      setStatus("rejected");
+      setStatus(REJECTED);
     }
   };
 
@@ -45,7 +52,7 @@ const App = () => {
 
   return (
     <div className="app-body">
-      {status === "booting" ? (
+      {status === BOOTING ? (
         <span>Loading...</span>
       ) : (
         <React.Fragment>
@@ -66,7 +73,7 @@ const App = () => {
           <button
             type="button"
             className="app-body__add-item"
-            disabled={status === "pending"}
+            disabled={status === PENDING}
             onClick={openModal}
           >
             Add item

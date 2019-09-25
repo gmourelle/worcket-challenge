@@ -31,9 +31,7 @@ ItemList.propTypes = {
       name: PropTypes.string
     })
   ).isRequired,
-  deleteItem: PropTypes.func.isRequired,
-  openModal: PropTypes.func.isRequired,
-  fetching: PropTypes.string.isRequired
+  deleteItem: PropTypes.func.isRequired
 };
 
 export default ItemList;

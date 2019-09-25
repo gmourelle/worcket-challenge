@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import PropTypes from "prop-types";
+import { PENDING } from "../../constants";
 
 import "./ModalForm.scss";
 
@@ -45,12 +46,12 @@ const ModalForm = ({ addItem, isOpen, closeModal, status }) => {
           className="form-container__form-input"
           value={item}
           onChange={handleChange}
-          disabled={status === "pending"}
+          disabled={status === PENDING}
         />
         <div className="form-container__action-buttons">
           <button
             type="submit"
-            disabled={status === "pending" || !item}
+            disabled={status === PENDING || !item}
             className="form-container__button form-container__button--submit"
           >
             Add Item
