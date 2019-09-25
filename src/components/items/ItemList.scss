@@ -1,0 +1,23 @@
+.container-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 15px 15px;
+  font-size: 20px;
+
+  &__del-btn {
+    background-color: #fff;
+    width: 60px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
