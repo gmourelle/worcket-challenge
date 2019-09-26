@@ -3,5 +3,3 @@ export const INIT = "INIT";
 export const PENDING = "PENDING";
 export const REJECTED = "REJECTED";
 export const RESOLVED = "RESOLVED";
-
-export const STATUS = [BOOTING, INIT, PENDING, REJECTED, RESOLVED];

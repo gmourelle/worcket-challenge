@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import api from "../api";
 import { Header, ItemList, ModalForm, EmptyList } from "../components";
-import {
-  STATUS,
-  BOOTING,
-  INIT,
-  PENDING,
-  REJECTED,
-  RESOLVED
-} from "../constants";
+import { BOOTING, INIT, PENDING, REJECTED, RESOLVED } from "../constants";
 import "./App.scss";
 const App = () => {
   const [status, setStatus] = useState(BOOTING);
@@ -21,6 +14,7 @@ const App = () => {
       setStatus(INIT);
     });
   }, []);
+
   const updateList = async value => {
     try {
       setStatus(PENDING);
