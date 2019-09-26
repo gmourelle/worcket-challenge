@@ -14,8 +14,14 @@ yarn start
 
 When you execute the start command, a window is automatically displayed in your browser.
 
-### `yarn test`
+```bash
+yarn test
+```
 
-### `yarn test:integration` to run cypress
+In order to open Cypress Test Runner
+
+```bash
+yarn test:integration
+```
 
 [DEMO](https://supermarket-list-gmourelle.netlify.com/)
