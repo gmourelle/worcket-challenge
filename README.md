@@ -1,20 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a UI interface that let you create and remove items in a supermarket list.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+```bash
+yarn install
+```
 
-### `npm start`
+## Usage
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+yarn start
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+When you execute the start command, a window is automatically displayed in your browser.
 
-### `npm test`
+### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `yarn test:integration` to run cypress
 
 [DEMO](https://supermarket-list-gmourelle.netlify.com/)
